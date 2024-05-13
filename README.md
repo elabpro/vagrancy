@@ -4,6 +4,15 @@
 
 Vagrancy implments a self-hosted subset of [Atlas](https://atlas.hashicorp.com/), (formally [Vagrant Cloud](https://vagrantcloud.com)). It allows you to build images in Packer, pushlish them and then share the images with your co-workers via Vagrant, all on-premise.
 
+### Build
+This project was built by using Ruby 2.2.*
+So it's better to use such version to build it again,
+```shell
+docker run --rm --name ruby -v .:/app -it ruby:2.2 bash
+#> bundle install
+#> rake package
+```
+
 ### Install
 Vagrancy has all its dependencies packaged with it. It requires no runtime at all.
 ```shell
